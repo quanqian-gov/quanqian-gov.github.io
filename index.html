@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>权前民主主义共和国</title>
 <style>
 * {
@@ -13,109 +14,108 @@
 body {
     background: #f5f7fa;
     color: #222;
-    font-size: 20px; /* 再次放大全局字体 */
-    line-height: 1.9;
+    font-size: 22px;
+    line-height: 2;
 }
 
-/* 语言切换 */
+/* 语言栏 */
 .lang-bar {
     background: #1e3799;
     color: white;
     text-align: right;
-    padding: 16px 36px; /* 再次放大上下内边距 */
-    font-size: 18px;
+    padding: 18px 20px;
+    font-size: 20px;
 }
 .lang-btn {
     color: white;
-    margin-left: 24px;
+    margin-left: 18px;
     cursor: pointer;
     border: none;
     background: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 .lang-btn:hover {
     text-decoration: underline;
 }
 
-/* 头部：国徽左对齐 */
+/* 头部 */
 header {
     background: #0a3d62;
     color: white;
-    padding: 36px 36px; /* 再次放大上下内边距 */
+    padding: 40px 20px;
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 20px;
 }
 .emblem {
-    width: 80px; /* 国徽再次放大 */
+    width: 90px;
     height: auto;
 }
 .title-text h1 {
-    font-size: 38px; /* 主标题再次放大 */
+    font-size: 42px;
     margin-bottom: 10px;
 }
 .title-text p {
-    font-size: 20px; /* 副标题再次放大 */
+    font-size: 22px;
     opacity: 0.9;
 }
 
-/* 导航横排 */
+/* 导航 */
 nav {
     background: #1e3799;
-    padding: 24px 0; /* 再次放大上下内边距 */
+    padding: 26px 0;
 }
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 56px; /* 导航间距再次放大 */
+    gap: 28px;
+    flex-wrap: wrap;
 }
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px; /* 导航文字再次放大 */
-}
-nav a:hover {
-    text-decoration: underline;
+    font-size: 22px;
 }
 
+/* 宽度和 OQCRP 官网完全一样 */
 .container {
-    width: 90%;
-    max-width: 1300px; /* 容器宽度再次放大 */
-    margin: auto;
-    padding: 48px 0; /* 再次放大上下内边距 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 .box {
     background: white;
-    padding: 42px; /* 内边距再次放大 */
-    border-radius: 14px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-    margin-bottom: 38px; /* 间距再次放大 */
+    padding: 40px 26px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    margin-bottom: 30px;
 }
 h2 {
     color: #0a3d62;
-    margin-bottom: 28px; /* 标题与内容间距再次放大 */
-    border-left: 7px solid #1e3799; /* 左侧边框再次加粗 */
-    padding-left: 18px;
-    font-size: 32px; /* 二级标题再次放大 */
+    margin-bottom: 26px;
+    border-left: 8px solid #1e3799;
+    padding-left: 20px;
+    font-size: 36px;
 }
 p {
-    line-height: 1.9;
-    margin-bottom: 18px; /* 段落间距再次放大 */
-    font-size: 20px; /* 正文字体再次放大 */
+    line-height: 2;
+    margin-bottom: 20px;
+    font-size: 22px;
 }
 
+/* 页脚 */
 footer {
     background: #0a3d62;
     color: white;
     text-align: center;
-    padding: 36px; /* 内边距再次放大 */
-    margin-top: 48px;
-    font-size: 18px; /* 页脚文字再次放大 */
+    padding: 40px 20px;
+    margin-top: 30px;
+    font-size: 20px;
 }
 
-/* 语言只显示当前选中 */
+/* 语言切换 */
 [data-lang] {
     display: none;
 }
@@ -151,7 +151,7 @@ footer {
     </div>
 </header>
 
-<!-- 导航：保留总统府，链接跳转到 zongtong.html -->
+<!-- 导航 -->
 <nav>
     <ul>
         <li>
