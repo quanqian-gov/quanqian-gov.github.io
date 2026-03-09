@@ -3,263 +3,317 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>权前民主主义共和国</title>
+<title>GovQDR权前民主主义共和国官方门户网站</title>
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Microsoft YaHei", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
 }
 body {
-    background: #f5f7fa;
-    color: #222;
-    font-size: 20px;
-    line-height: 1.9;
+  background: #f5f7fa;
+  color: #222;
+  font-size: 20px;
+  line-height: 1.9;
 }
 
-/* 语言栏 */
-.lang-bar {
-    background: #1e3799;
-    color: white;
-    text-align: right;
-    padding: 12px 18px;
-    font-size: 16px;
+.top-bar {
+  background: #1e3799;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.lang-btn {
-    color: white;
-    margin-left: 14px;
-    cursor: pointer;
-    border: none;
-    background: none;
-    font-size: 16px;
-}
-.lang-btn:hover {
-    text-decoration: underline;
-}
-
-/* 头部 */
-header {
-    background: #0a3d62;
-    color: white;
-    padding: 30px 20px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .emblem {
-    width: 70px;
-    height: auto;
+  width: 48px;
+  height: auto;
 }
-.title-text h1 {
-    font-size: 36px;
-    margin-bottom: 8px;
-}
-.title-text p {
-    font-size: 20px;
-    opacity: 0.9;
+.country-name {
+  font-size: 24px;
+  font-weight: 600;
 }
 
-/* 导航 */
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.lang-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+.lang-btn::after {
+  content: "▼";
+  font-size: 12px;
+}
+.lang-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: white;
+  min-width: 140px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+.lang-content button {
+  color: #222;
+  padding: 10px 16px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+header {
+  background: #0a3d62;
+  color: white;
+  padding: 40px 20px;
+  text-align: left;
+}
+.slogan {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.welcome {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.service-btn {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 10px 22px;
+  background: #1e3799;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
 nav {
-    background: #1e3799;
-    padding: 18px 0;
+  background: #1e3799;
+  padding: 18px 0;
 }
 nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 24px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-/* 容器宽度 */
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1.8rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.8rem;
 }
 .box {
-    background: white;
-    padding: 32px 24px;
-    border-radius: 14px;
-    box-shadow: 0 5px 16px rgba(0,0,0,0.1);
-    margin-bottom: 24px;
+  background: white;
+  padding: 32px 24px;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
 }
 h2 {
-    color: #0a3d62;
-    margin-bottom: 20px;
-    border-left: 6px solid #1e3799;
-    padding-left: 16px;
-    font-size: 30px;
+  color: #0a3d62;
+  margin-bottom: 20px;
+  border-left: 6px solid #1e3799;
+  padding-left: 16px;
+  font-size: 30px;
 }
 p {
-    line-height: 1.9;
-    margin-bottom: 16px;
-    font-size: 20px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+  font-size: 20px;
+  text-align: left;
 }
 
-/* 页脚 */
 footer {
-    background: #0a3d62;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 24px;
-    font-size: 18px;
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 24px;
+  font-size: 18px;
 }
 
-/* 语言切换 */
 [data-lang] {
-    display: none;
+  display: none;
 }
 [data-lang].show {
-    display: block;
+  display: block !important;
 }
 </style>
 </head>
-
 <body>
 
-<!-- 语言切换 -->
-<div class="lang-bar">
-    <button class="lang-btn" onclick="changeLang('cn')">中文</button>
-    <button class="lang-btn" onclick="changeLang('jp')">日本語</button>
-    <button class="lang-btn" onclick="changeLang('en')">English</button>
-    <button class="lang-btn" onclick="changeLang('qn')">権前語</button>
+<div class="top-bar">
+  <div class="top-left">
+    <img class="emblem" src="https://i.ibb.co/rRGQWVwf/IMG-1775.jpg" alt="国徽">
+    <span class="country-name" data-lang="cn">权前民主主义共和国</span>
+    <span class="country-name" data-lang="jp">権前民主主義共和国</span>
+    <span class="country-name" data-lang="en">Republic of Quanqian</span>
+    <span class="country-name" data-lang="qn">权前民主主義共和国</span>
+  </div>
+  <div class="lang-dropdown">
+    <button class="lang-btn" onclick="toggleLang()">语言</button>
+    <div class="lang-content" id="langMenu">
+      <button onclick="changeLang('cn')">中文</button>
+      <button onclick="changeLang('jp')">日本語</button>
+      <button onclick="changeLang('en')">English</button>
+      <button onclick="changeLang('qn')">権前語</button>
+    </div>
+  </div>
 </div>
 
-<!-- 头部 -->
 <header>
-    <img class="emblem" src="https://i.ibb.co/rRGQWVwf/IMG-1775.jpg" alt="国徽">
-    <div class="title-text">
-        <h1 data-lang="cn">权前民主主义共和国</h1>
-        <h1 data-lang="jp">権前民主主義共和国</h1>
-        <h1 data-lang="en">Republic of Quanqian</h1>
-        <h1 data-lang="qn">权前民主主義共和国</h1>
+  <div class="slogan" data-lang="cn">
+    尊重每一位公民与居民<br>
+    共建文明国家
+  </div>
+  <div class="welcome" data-lang="cn">
+    欢迎访问权前民主主义共和国官方门户网站。查找政府服务，申请签证，了解国家政策最新动态。
+    <br>
+    <a href="homo.html" class="service-btn">浏览服务</a>
+  </div>
 
-        <p data-lang="cn">官方国家网站</p>
-        <p data-lang="jp">公式国家サイト</p>
-        <p data-lang="en">Official National Website</p>
-        <p data-lang="qn">公式国家サイト</p>
-    </div>
+  <div class="slogan" data-lang="jp">
+    すべての市民を尊重<br>
+    文明国家を共に築く
+  </div>
+  <div class="welcome" data-lang="jp">
+    権前民主主義共和国公式ウェブサイトへようこそ。行政サービスを検索し、ビザを申請し、国家政策の最新動向をご確認ください。
+    <br>
+    <a href="homo.html" class="service-btn">サービス閲覧</a>
+  </div>
+
+  <div class="slogan" data-lang="en">
+    Respect every citizen and resident<br>
+    Build a civilized country together
+  </div>
+  <div class="welcome" data-lang="en">
+    Welcome to the official website of the Republic of Quanqian. Find government services, apply for visas, and learn the latest national policies.
+    <br>
+    <a href="homo.html" class="service-btn">Browse Services</a>
+  </div>
+
+  <div class="slogan" data-lang="qn">
+    尊重每一位公民与居民<br>
+    共建文明国家
+  </div>
+  <div class="welcome" data-lang="qn">
+    欢迎访问权前民主主義共和国公式サイト。查找政府サービス，申请ビザ，了解国家政策最新状态。
+    <br>
+    <a href="homo.html" class="service-btn">浏览服务</a>
+  </div>
 </header>
 
-<!-- 导航 -->
 <nav>
-    <ul>
-        <li>
-            <a href="#about" data-lang="cn">国家概况</a>
-            <a href="#about" data-lang="jp">国家概要</a>
-            <a href="#about" data-lang="en">About</a>
-            <a href="#about" data-lang="qn">国家概要</a>
-        </li>
-        <li>
-            <a href="#leader" data-lang="cn">国家元首</a>
-            <a href="#leader" data-lang="jp">国家元首</a>
-            <a href="#leader" data-lang="en">Leader</a>
-            <a href="#leader" data-lang="qn">国家总统</a>
-        </li>
-        <li>
-            <a href="#gov" data-lang="cn">政府机构</a>
-            <a href="#gov" data-lang="jp">政府機関</a>
-            <a href="#gov" data-lang="en">Government</a>
-            <a href="#gov" data-lang="qn">政府機関</a>
-        </li>
-        <li>
-            <a href="zongtong.html" data-lang="cn">总统府</a>
-            <a href="zongtong.html" data-lang="jp">大統領府</a>
-            <a href="zongtong.html" data-lang="en">Presidential Office</a>
-            <a href="zongtong.html" data-lang="qn">大統領府</a>
-        </li>
-    </ul>
+  <ul>
+    <li><a href="#about" data-lang="cn">国家概况</a><a href="#about" data-lang="jp">国家概要</a><a href="#about" data-lang="en">About</a><a href="#about" data-lang="qn">国家概要</a></li>
+    <li><a href="#leader" data-lang="cn">国家元首</a><a href="#leader" data-lang="jp">国家元首</a><a href="#leader" data-lang="en">Leader</a><a href="#leader" data-lang="qn">国家总统</a></li>
+    <li><a href="#gov" data-lang="cn">政府机构</a><a href="#gov" data-lang="jp">政府機関</a><a href="#gov" data-lang="en">Government</a><a href="#gov" data-lang="qn">政府機関</a></li>
+    <li><a href="zongtong.html" data-lang="cn">总统府</a><a href="zongtong.html" data-lang="jp">大統領府</a><a href="zongtong.html" data-lang="en">Presidential Office</a><a href="zongtong.html" data-lang="qn">总统府</a></li>
+  </ul>
 </nav>
 
 <div class="container">
-
 <section id="about" class="box">
-    <h2 data-lang="cn">国家概况</h2>
-    <h2 data-lang="jp">国家概要</h2>
-    <h2 data-lang="en">National Overview</h2>
-    <h2 data-lang="qn">国家概要</h2>
-
-    <p data-lang="cn">国名：权前民主主义共和国</p>
-    <p data-lang="jp">国名：権前民主主義共和国</p>
-    <p data-lang="en">Name: Republic of Quanqian</p>
-    <p data-lang="qn">国名：权前民主主義共和国</p>
-
-    <p data-lang="cn">国家体制：共产主义与资本主义相结合体制</p>
-    <p data-lang="jp">国家体制：共産主義と資本主義結合体制</p>
-    <p data-lang="en">System: Combined Communism & Capitalism</p>
-    <p data-lang="qn">国家体制：共産主義与資本主義结合体制</p>
-
-    <p data-lang="cn">官方语言：权前语</p>
-    <p data-lang="jp">公用語：権前語</p>
-    <p data-lang="en">Official Language: Quanqian</p>
-    <p data-lang="qn">公用語：权前語</p>
+  <h2 data-lang="cn">国家概况</h2>
+  <h2 data-lang="jp">国家概要</h2>
+  <h2 data-lang="en">National Overview</h2>
+  <h2 data-lang="qn">国家概要</h2>
+  <p data-lang="cn">国名：权前民主主义共和国</p>
+  <p data-lang="jp">国名：権前民主主義共和国</p>
+  <p data-lang="en">Name: Republic of Quanqian</p>
+  <p data-lang="qn">国名：权前民主主義共和国</p>
+  <p data-lang="cn">国家体制：共产主义与资本主义相结合体制</p>
+  <p data-lang="jp">国家体制：共産主義と資本主義結合体制</p>
+  <p data-lang="en">System: Combined Communism & Capitalism</p>
+  <p data-lang="qn">国家体制：共産主義与資本主義结合体制</p>
+  <p data-lang="cn">官方语言：权前语</p>
+  <p data-lang="jp">公用語：権前語</p>
+  <p data-lang="en">Official Language: Quanqian</p>
+  <p data-lang="qn">公用語：权前語</p>
 </section>
 
 <section id="leader" class="box">
-    <h2 data-lang="cn">国家元首</h2>
-    <h2 data-lang="jp">国家元首</h2>
-    <h2 data-lang="en">Head of State</h2>
-    <h2 data-lang="qn">国家总统</h2>
-
-    <p data-lang="cn">总统：李田所</p>
-    <p data-lang="jp">大統領：李田所</p>
-    <p data-lang="en">President: Li Tiansuo</p>
-    <p data-lang="qn">总统：李田所</p>
+  <h2 data-lang="cn">国家元首</h2>
+  <h2 data-lang="jp">国家元首</h2>
+  <h2 data-lang="en">Head of State</h2>
+  <h2 data-lang="qn">国家总统</h2>
+  <p data-lang="cn">前总统：基米·刀盾</p>
+  <p data-lang="jp">前大統領：キミ・ドゥン</p>
+  <p data-lang="en">Former President: Kimi Daodun</p>
+  <p data-lang="qn">前总统：基米·刀盾</p>
+  <p data-lang="cn">现总统：李田所</p>
+  <p data-lang="jp">現大統領：李田所</p>
+  <p data-lang="en">Current President: Li Tiansuo</p>
+  <p data-lang="qn">现总统：李田所</p>
 </section>
 
 <section id="gov" class="box">
-    <h2 data-lang="cn">政府机构</h2>
-    <h2 data-lang="jp">政府機関</h2>
-    <h2 data-lang="en">Government</h2>
-    <h2 data-lang="qn">政府機関</h2>
-
-    <p data-lang="cn">• 权前出入境管理局</p>
-    <p data-lang="jp">• 権前出入国管理局</p>
-    <p data-lang="en">• Quanqian Immigration Administration</p>
-    <p data-lang="qn">• 权前出入国管理局</p>
-
-    <p data-lang="cn">• 国家海关总署</p>
-    <p data-lang="jp">• 国家税関総署</p>
-    <p data-lang="en">• State Customs Administration</p>
-    <p data-lang="qn">• 国家税関总署</p>
-
-    <p data-lang="cn">• 权前出入境管理科</p>
-    <p data-lang="jp">• 権前出入国管理課</p>
-    <p data-lang="en">• Quanqian Immigration Division</p>
-    <p data-lang="qn">• 权前出入国管理科</p>
-
-    <p data-lang="cn">• 国防部、内政部、财政部、司法部</p>
-    <p data-lang="jp">• 国防部、内政省、財務省、司法省</p>
-    <p data-lang="en">• Ministry of Defense, Interior, Finance, Justice</p>
-    <p data-lang="qn">• 国防部、内政部、财政部、司法部</p>
+  <h2 data-lang="cn">政府机构</h2>
+  <h2 data-lang="jp">政府機関</h2>
+  <h2 data-lang="en">Government</h2>
+  <h2 data-lang="qn">政府機関</h2>
+  <p data-lang="cn">• 权前出入境管理局</p>
+  <p data-lang="jp">• 権前出入国管理局</p>
+  <p data-lang="en">• Quanqian Immigration Administration</p>
+  <p data-lang="qn">• 权前出入国管理局</p>
+  <p data-lang="cn">• 国家海关总署</p>
+  <p data-lang="jp">• 国家税関総署</p>
+  <p data-lang="en">• State Customs Administration</p>
+  <p data-lang="qn">• 国家税関总署</p>
+  <p data-lang="cn">• 权前出入境管理科</p>
+  <p data-lang="jp">• 権前出入国管理課</p>
+  <p data-lang="en">• Quanqian Immigration Division</p>
+  <p data-lang="qn">• 权前出入国管理科</p>
+  <p data-lang="cn">• 国防部、内政部、财政部、司法部</p>
+  <p data-lang="jp">• 国防部、内政省、財務省、司法省</p>
+  <p data-lang="en">• Ministry of Defense, Interior, Finance, Justice</p>
+  <p data-lang="qn">• 国防部、内政部、财政部、司法部</p>
 </section>
-
 </div>
 
 <footer>
-    <p data-lang="cn">权前民主主义共和国 官方网站 © 2026</p>
-    <p data-lang="jp">権前民主主義共和国 公式サイト © 2026</p>
-    <p data-lang="en">Republic of Quanqian Official Website © 2026</p>
-    <p data-lang="qn">权前民主主義共和国 公式サイト © 2026</p>
+  <p data-lang="cn">© 权前民主主义共和国官方门户网站</p>
+  <p data-lang="jp">© 権前民主主義共和国公式ウェブサイト</p>
+  <p data-lang="en">© Official Website of the Republic of Quanqian</p>
+  <p data-lang="qn">权前民主主義共和国公式门户サイト©</p>
 </footer>
 
 <script>
-document.querySelectorAll('[data-lang="cn"]').forEach(e => e.classList.add('show'));
-function changeLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(e => e.classList.remove('show'));
-    document.querySelectorAll('[data-lang="'+lang+'"]').forEach(e => e.classList.add('show'));
-}
+document.querySelectorAll('[data-lang="cn"]').forEach(e=>e.classList.add('show'));
+function toggleLang(){const m=document.getElementById('langMenu');m.style.display=m.style.display=='block'?'none':'block';}
+function changeLang(l){document.querySelectorAll('[data-lang]').forEach(e=>e.classList.remove('show'));document.querySelectorAll('[data-lang="'+l+'"]').forEach(e=>e.classList.add('show'));document.getElementById('langMenu').style.display='none';}
 </script>
-
 </body>
 </html>
