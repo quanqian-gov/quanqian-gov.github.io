@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>浏览服务 - 权前民主主义共和国</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+body {
+  background: #f5f7fa;
+  color: #222;
+  font-size: 20px;
+  line-height: 1.9;
+}
+
+.top-bar {
+  background: #1e3799;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.emblem {
+  width: 48px;
+  height: auto;
+}
+.country-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.lang-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+.lang-btn::after {
+  content: "▼";
+  font-size: 12px;
+}
+.lang-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+.lang-content button {
+  color: #222;
+  padding: 10px 16px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.service-btn {
+  display: block;
+  width: 100%;
+  margin: 16px 0;
+  padding: 18px;
+  background: #1e3799;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+[data-lang] {
+  display: none;
+}
+[data-lang].show {
+  display: block !important;
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="top-left">
+    <img class="emblem" src="https://i.ibb.co/rRGQWVwf/IMG-1775.jpg" alt="国徽">
+    <span class="country-name" data-lang="cn">权前民主主义共和国</span>
+    <span class="country-name" data-lang="jp">権前民主主義共和国</span>
+    <span class="country-name" data-lang="en">Republic of Quanqian</span>
+    <span class="country-name" data-lang="qn">权前民主主義共和国</span>
+  </div>
+  <div class="lang-dropdown">
+    <button class="lang-btn" onclick="toggleLang()">语言</button>
+    <div class="lang-content" id="langMenu">
+      <button onclick="changeLang('cn')">中文</button>
+      <button onclick="changeLang('jp')">日本語</button>
+      <button onclick="changeLang('en')">English</button>
+      <button onclick="changeLang('qn')">権前語</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <a class="service-btn" data-lang="cn">申请身份证</a>
+  <a class="service-btn" data-lang="jp">身分証申請</a>
+  <a class="service-btn" data-lang="en">Apply for ID Card</a>
+  <a class="service-btn" data-lang="qn">身分証申请</a>
+
+  <a class="service-btn" data-lang="cn">申请签证</a>
+  <a class="service-btn" data-lang="jp">ビザ申請</a>
+  <a class="service-btn" data-lang="en">Apply for Visa</a>
+  <a class="service-btn" data-lang="qn">ビザ申请</a>
+
+  <a class="service-btn" data-lang="cn">申请护照</a>
+  <a class="service-btn" data-lang="jp">パスポート申請</a>
+  <a class="service-btn" data-lang="en">Apply for Passport</a>
+  <a class="service-btn" data-lang="qn">パスポート申请</a>
+
+  <a class="service-btn" data-lang="cn">申请来往湾岸特别行政区通行证</a>
+  <a class="service-btn" data-lang="jp">湾岸特別行政区通行証申請</a>
+  <a class="service-btn" data-lang="en">Wan'an SAR Pass</a>
+  <a class="service-btn" data-lang="qn">湾岸特別行政区通行証</a>
+
+  <a class="service-btn" data-lang="cn">入籍申请</a>
+  <a class="service-btn" data-lang="jp">国籍取得申請</a>
+  <a class="service-btn" data-lang="en">Naturalization Application</a>
+  <a class="service-btn" data-lang="qn">入籍申请</a>
+
+  <a class="service-btn" data-lang="cn">证件介绍</a>
+  <a class="service-btn" data-lang="jp">証明書紹介</a>
+  <a class="service-btn" data-lang="en">Document Introduction</a>
+  <a class="service-btn" data-lang="qn">証明書紹介</a>
+</div>
+
+<script>
+document.querySelectorAll('[data-lang="cn"]').forEach(e=>e.classList.add('show'));
+
+function toggleLang(){
+  var m=document.getElementById('langMenu');
+  m.style.display=m.style.display=='block'?'none':'block';
+}
+
+function changeLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(e=>e.classList.remove('show'));
+  document.querySelectorAll('[data-lang="'+lang+'"]').forEach(e=>e.classList.add('show'));
+  document.getElementById('langMenu').style.display='none';
+}
+</script>
+</body>
+</html>
