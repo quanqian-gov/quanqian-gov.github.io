@@ -1,0 +1,20 @@
+{
+  "name": "权前民主主义共和国官方门户",
+  "short_name": "权前共和国",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1e3799",
+  "background_color": "#f5f7fa",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/rRGQWVwf/IMG-1775.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://i.ibb.co/rRGQWVwf/IMG-1775.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
